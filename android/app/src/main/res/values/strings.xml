@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Hjulet</string>
+    <string name="title_activity_main">Hjulet</string>
+    <string name="package_name">dk.charleynordahn.hjulet</string>
+    <string name="custom_url_scheme">dk.charleynordahn.hjulet</string>
+</resources>
