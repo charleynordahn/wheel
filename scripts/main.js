@@ -6,7 +6,7 @@ const container = document.querySelector('#categories-container');
 
 // Accordion functionality
 const setupAccordion = () => {
-    const wrappers = document.querySelectorAll('.wrapper');
+    const wrappers = document.querySelectorAll('.accordion-wrapper');
 
     wrappers.forEach(wrapper => {
         const button = wrapper.previousElementSibling;
@@ -49,8 +49,8 @@ const renderFocusAreas = () => {
                 </span>
             </button>
 
-            <div class="wrapper">
-                <div class="container">
+            <div class="accordion-wrapper">
+                <div class="accordion-container">
                     <ul>
                         ${focusArea.items.map(item => `
                             <li>${item}</li>
@@ -64,5 +64,4 @@ const renderFocusAreas = () => {
     setupAccordion();
 };
 
-// Initialize
 renderFocusAreas();

@@ -1,3 +1,7 @@
+/* ========================================
+   CSS VARIABLES
+======================================== */
+
 :root {
     --blue: #09a4e6;
     --pink: #e75995;
@@ -5,11 +9,15 @@
     --red: #e9554f;
     --green: #7eba2f;
     --orange: #dd682d;
-	--purple: #535f9f;
-	--dark-grey: #232323;
+    --purple: #535f9f;
+    --dark-grey: #232323;
     --white: #ffffff;
     --black: #000000;
 }
+
+/* ========================================
+   RESET & BASE STYLES
+======================================== */
 
 * {
     box-sizing: border-box;
@@ -21,77 +29,86 @@ html {
 }
 
 body {
-	font-family: "Cachet", sans-serif;
-	color: var(--white);
-	font-size: 1.2rem;
-	background-color: var(--purple);
+    font-family: "Cachet", sans-serif;
+    font-size: 1.2rem;
+    color: var(--white);
+    background-color: var(--purple);
 }
 
-.focus-area-icon-container {
-	width: 24px;
-	height: 24px;
-}
+/* ========================================
+   TYPOGRAPHY
+======================================== */
 
 .focus-area-title {
-	font-family: "Cachet", sans-serif;
-	font-size: 1.3rem;
-	font-weight: 700;
+    font-family: "Cachet", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 li {
-	font-family: "Cachet", sans-serif;
+    font-family: "Cachet", sans-serif;
     font-weight: 400;
-	padding: 0.25rem 0;
+    padding: 0.25rem 0;
 }
 
-/* Focus Area Sections background colors */
+/* ========================================
+   FOCUS AREA SECTIONS
+======================================== */
+
 #daily-activities {
-	background-color: var(--blue);
+    background-color: var(--blue);
 }
 
 #home-environment {
-	background-color: var(--pink);
+    background-color: var(--pink);
 }
 
 #eating-drinking {
-	background-color: var(--yellow);
+    background-color: var(--yellow);
 }
 
 #physical-symptoms {
-	background-color: var(--red);
+    background-color: var(--red);
 }
 
 #mental-social {
-	background-color: var(--green);
+    background-color: var(--green);
 }
 
 #medication-intake {
-	background-color: var(--orange);
+    background-color: var(--orange);
 }
 
-#daily-activities .container,
-#home-environment .container,
-#eating-drinking .container,
-#physical-symptoms .container,
-#mental-social .container,
-#medication-intake .container {
-     background-color: rgba(0, 0, 0, 0.1);
+#daily-activities .accordion-container,
+#home-environment .accordion-container,
+#eating-drinking .accordion-container,
+#physical-symptoms .accordion-container,
+#mental-social .accordion-container,
+#medication-intake .accordion-container {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Focus Area Button Styles */
+/* ========================================
+   FOCUS AREA BUTTONS
+======================================== */
+
 .focus-area-button {
-	font-family: "Cachet", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    font-family: "Cachet", sans-serif;
     font-weight: 500;
-	width: 100%;
-	border: none;
-	background-color: transparent;
+    color: var(--white);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 
-	color: var(--white);
-	cursor: pointer;
-	padding: 1.5rem 1rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.focus-area-icon-container {
+    width: 24px;
+    height: 24px;
 }
 
 .focus-area-icon-title {
@@ -107,51 +124,32 @@ li {
     flex-shrink: 0;
 }
 
-.focus-area-button span {
-    display: inline-block;
-    font-size: 2rem;
-    transform-origin: center;
-    transition: transform 0.2s ease;
-}
+/* ========================================
+   ACCORDION
+======================================== */
 
-.footer {
-	display: grid;
-	grid-template-rows: auto auto auto;
-	grid-gap: 0.5rem;
-	padding: 1.5rem 1rem;
-	font-size: 1rem;
-	font-weight: 400;
-}
-
-.wrapper {
-    font-family: "Cachet", sans-serif;
-    color: var(--white);
+.accordion-wrapper {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.15s ease-out;
+
+    font-family: "Cachet", sans-serif;
+    color: var(--white);
 }
 
-.open {
-    max-height: 500px;
-}
-
-.container {
+.accordion-container {
     padding: 1rem 1rem 1rem 0;
 }
 
-.footer a {
-    color: var(--white);
-    text-decoration: underline;
-}
-
-.footer p {
-	margin-bottom: 0.5rem; 
+.accordion-icon {
+    display: inline-block;
+    transform-origin: center;
 }
 
 .accordion-icon svg {
+    display: block;
     width: 30px;
     height: 30px;
-    display: block;
     transition: transform 0.2s ease;
 }
 
@@ -159,6 +157,33 @@ li {
     transform: rotate(180deg);
 }
 
+.open {
+    max-height: 500px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 0.5rem;
+
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.footer a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* ========================================
+   DIVIDERS
+======================================== */
+
 hr {
-	margin: 1rem 0;
+    margin: 1rem 0;
 }
