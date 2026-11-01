@@ -9,7 +9,7 @@
     --red: #e9554f;
     --green: #7eba2f;
     --orange: #dd682d;
-    --purple: #535f9f;
+    --purple: #394171;
     --dark-grey: #232323;
     --white: #ffffff;
     --black: #000000;
@@ -54,9 +54,21 @@ li {
 /* ========================================
    FOCUS AREA SECTIONS
 ======================================== */
+#focus-areas-container {
+	display: grid;
+	grid-gap: 0.3rem;
+	border-radius: 0.5rem;
+	padding: 0.3rem;
+}
+
+.focus-area-wrapper {
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
 
 #daily-activities {
     background-color: var(--blue);
+	border-radius: 0.5rem;
 }
 
 #home-environment {
@@ -85,7 +97,7 @@ li {
 #physical-symptoms .accordion-container,
 #mental-social .accordion-container,
 #medication-intake .accordion-container {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 /* ========================================

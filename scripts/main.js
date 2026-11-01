@@ -2,7 +2,7 @@
 import { focusAreas } from '../data/data.js';
 import { icons } from '../assets/icon.js';
 
-const container = document.querySelector('#categories-container');
+const container = document.querySelector('#focus-areas-container');
 
 // Accordion functionality
 const setupAccordion = () => {
@@ -32,7 +32,7 @@ const setupAccordion = () => {
 // Render focus areas
 const renderFocusAreas = () => {
     container.innerHTML = focusAreas.map(focusArea => `
-        <section id="${focusArea.id}">
+        <section id="${focusArea.id}" class="focus-area-wrapper">
             <button class="focus-area-button">
                 <div class="focus-area-icon-title">
                     <div class="focus-area-icon-container">
