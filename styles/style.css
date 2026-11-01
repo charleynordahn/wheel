@@ -1,0 +1,164 @@
+:root {
+    --blue: #09a4e6;
+    --pink: #e75995;
+    --yellow: #ffaf03;
+    --red: #e9554f;
+    --green: #7eba2f;
+    --orange: #dd682d;
+	--purple: #535f9f;
+	--dark-grey: #232323;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Cachet", sans-serif;
+	color: var(--white);
+	font-size: 1.2rem;
+	background-color: var(--purple);
+}
+
+.focus-area-icon-container {
+	width: 24px;
+	height: 24px;
+}
+
+.focus-area-title {
+	font-family: "Cachet", sans-serif;
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+li {
+	font-family: "Cachet", sans-serif;
+    font-weight: 400;
+	padding: 0.25rem 0;
+}
+
+/* Focus Area Sections background colors */
+#daily-activities {
+	background-color: var(--blue);
+}
+
+#home-environment {
+	background-color: var(--pink);
+}
+
+#eating-drinking {
+	background-color: var(--yellow);
+}
+
+#physical-symptoms {
+	background-color: var(--red);
+}
+
+#mental-social {
+	background-color: var(--green);
+}
+
+#medication-intake {
+	background-color: var(--orange);
+}
+
+#daily-activities .container,
+#home-environment .container,
+#eating-drinking .container,
+#physical-symptoms .container,
+#mental-social .container,
+#medication-intake .container {
+     background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Focus Area Button Styles */
+.focus-area-button {
+	font-family: "Cachet", sans-serif;
+    font-weight: 500;
+	width: 100%;
+	border: none;
+	background-color: transparent;
+
+	color: var(--white);
+	cursor: pointer;
+	padding: 1.5rem 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.focus-area-icon-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.focus-area-icon-title > svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.focus-area-button span {
+    display: inline-block;
+    font-size: 2rem;
+    transform-origin: center;
+    transition: transform 0.2s ease;
+}
+
+.footer {
+	display: grid;
+	grid-template-rows: auto auto auto;
+	grid-gap: 0.5rem;
+	padding: 1.5rem 1rem;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.wrapper {
+    font-family: "Cachet", sans-serif;
+    color: var(--white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.15s ease-out;
+}
+
+.open {
+    max-height: 500px;
+}
+
+.container {
+    padding: 1rem 1rem 1rem 0;
+}
+
+.footer a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.footer p {
+	margin-bottom: 0.5rem; 
+}
+
+.accordion-icon svg {
+    width: 30px;
+    height: 30px;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.focus-area-button.active .accordion-icon svg {
+    transform: rotate(180deg);
+}
+
+hr {
+	margin: 1rem 0;
+}
